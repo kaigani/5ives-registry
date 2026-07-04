@@ -1,0 +1,11 @@
+{
+  "spec": 1,
+  "channel_id": "open-cinema",
+  "name": "Open Cinema",
+  "description": "The Blender Foundation open-movie collection and other openly licensed cinema, on a rotating 24-hour schedule.",
+  "categories": [
+    "film",
+    "animation"
+  ],
+  "tagline": "Open movies, openly made."
+}

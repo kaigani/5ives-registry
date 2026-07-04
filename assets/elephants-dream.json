@@ -1,0 +1,20 @@
+{
+  "spec": 1,
+  "asset_id": "elephants-dream",
+  "title": "Elephants Dream",
+  "creator": "Blender Foundation",
+  "description": "",
+  "duration_seconds": 654,
+  "content_rating": "NR",
+  "license": "CC-BY-2.5",
+  "categories": [],
+  "magnet_uri": "magnet:?xt=urn:btih:b2ef37c627a71b0ec1c2cf1031688779b2fba41d&dn=elephants-dream&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+  "info_hash_v1": "b2ef37c627a71b0ec1c2cf1031688779b2fba41d",
+  "content_sha256": "5d833b69b9fcb8d59722c77ca375c9435ac82e5d8b6cff17f77e2455c1314b01",
+  "files": {
+    "video": "video_1080p.mp4",
+    "poster": "poster.jpg"
+  },
+  "mirror_urls": [],
+  "published_at": "2026-07-04T04:43:27.912083Z"
+}

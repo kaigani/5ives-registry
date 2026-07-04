@@ -1,0 +1,20 @@
+{
+  "spec": 1,
+  "asset_id": "tears-of-steel",
+  "title": "Tears of Steel",
+  "creator": "Blender Foundation",
+  "description": "",
+  "duration_seconds": 734,
+  "content_rating": "NR",
+  "license": "CC-BY-3.0",
+  "categories": [],
+  "magnet_uri": "magnet:?xt=urn:btih:51c150e43de42c59128a0fadc08846b618ab9bb0&dn=tears-of-steel&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce",
+  "info_hash_v1": "51c150e43de42c59128a0fadc08846b618ab9bb0",
+  "content_sha256": "b6aff1736fc48cf8997837dd7b08a68a070052fe6b51f1b36d5ae23ae1fc60fa",
+  "files": {
+    "video": "video_1080p.mp4",
+    "poster": "poster.jpg"
+  },
+  "mirror_urls": [],
+  "published_at": "2026-07-04T04:43:26.960295Z"
+}

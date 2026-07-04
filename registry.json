@@ -1,0 +1,14 @@
+{
+  "spec": 1,
+  "registry_id": "fives-official",
+  "name": "5ives LIVE Official Registry",
+  "generated_at": "2026-07-04T04:27:43.158552Z",
+  "channels": [
+    "open-cinema"
+  ],
+  "tracker_urls": [
+    "udp://tracker.opentrackr.org:1337/announce",
+    "udp://open.demonii.com:1337/announce",
+    "udp://tracker.torrent.eu.org:451/announce"
+  ]
+}
