@@ -15,6 +15,8 @@
     "video": "video_1080p.mp4",
     "poster": "poster.jpg"
   },
-  "mirror_urls": [],
+  "mirror_urls": [
+    "https://github.com/kaigani/5ives-registry/releases/download/media-tears-of-steel"
+  ],
   "published_at": "2026-07-04T04:43:26.960295Z"
 }
