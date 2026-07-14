@@ -9,6 +9,12 @@ optional HTTP mirrors). The app fetches these files raw, verifies each against
 static host (`fives-prep registry init` scaffolds one) and users add it in the app via
 Settings → Channel Sources. This repo is a default, not a gatekeeper.
 
+Official media is distributed peer-to-peer first. Each signed asset also names
+a per-asset GitHub prerelease containing `video_1080p.mp4` and `poster.jpg`, so a
+fresh viewer behind NAT or a network that blocks torrent discovery still has a
+range-capable HTTP origin. `scripts/refresh-official.sh` creates/reuses those
+releases, signs their URLs into the asset documents, and refreshes schedules.
+
 ```
 registry.json (+ .minisig)     root index: registry id/name, channel list, tracker URLs, spec version
 keys/registry.pub              this registry's minisign public key

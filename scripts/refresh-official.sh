@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Extend the official Open Cinema looping schedule horizon, sign it locally with
-# the official key, verify, and publish. The official signing key is
+# Ensure every official asset has a GitHub Releases streaming fallback, extend
+# the Open Cinema schedule horizon, sign locally, verify, and publish. The key is
 # password-encrypted and lives only on this machine — you enter the password
 # ONCE (minisign prompts); it never leaves your Mac and is never stored.
 #
@@ -14,9 +14,12 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"          # .../5ives-registry
 KEY="${FIVES_OFFICIAL_KEY:-$REPO_DIR/../secrets/official/registry.key}"
 PUB="$REPO_DIR/keys/registry.pub"                                    # the published (== pinned) key
+CONTENT_DIR="${FIVES_CONTENT_DIR:-$HOME/Library/Application Support/live.5ives.app/content}"
+GITHUB_REPO="${FIVES_OFFICIAL_REPO:-kaigani/5ives-registry}"
 DAYS="${1:-14}"
 
 command -v minisign >/dev/null 2>&1 || { echo "error: minisign not found (brew install minisign)"; exit 1; }
+command -v gh >/dev/null 2>&1 || { echo "error: GitHub CLI not found (brew install gh)"; exit 1; }
 [ -f "$KEY" ] || { echo "error: official key not found at: $KEY"; exit 1; }
 [ -f "$PUB" ] || { echo "error: published key not found at: $PUB"; exit 1; }
 
@@ -40,27 +43,81 @@ cp "$KEY" "$TMPKEY"; chmod 600 "$TMPKEY"
 echo "Unlock the official signing key (enter your recorded password):"
 minisign -C -W -s "$TMPKEY"   # prompts once for the current password, writes the copy unencrypted
 
-# 2. Extend + sign the schedules forward from today (prehashed = app-compatible).
+# 2. Put each package in an idempotent per-asset prerelease. GitHub is the HTTP
+#    origin fallback; torrents/DHT remain the first-choice distribution path.
+#    The exact release base is then included in the signed asset document.
+while IFS= read -r doc; do
+  asset_id="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["asset_id"])' "$doc")"
+  package="$CONTENT_DIR/$asset_id"
+  video="$package/video_1080p.mp4"
+  poster="$package/poster.jpg"
+  [ -f "$video" ] || { echo "error: media missing: $video"; exit 1; }
+  [ -f "$poster" ] || { echo "error: media missing: $poster"; exit 1; }
+
+  tag="media-$asset_id"
+  if ! gh release view "$tag" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
+    gh release create "$tag" --repo "$GITHUB_REPO" --prerelease \
+      --title "5ives media: $asset_id" \
+      --notes "Streaming fallback managed by 5ives LIVE."
+  fi
+
+  sizes="$(gh api "repos/$GITHUB_REPO/releases/tags/$tag" | python3 -c '
+import json, sys
+assets = {a["name"]: a["size"] for a in json.load(sys.stdin).get("assets", [])}
+print(assets.get("video_1080p.mp4", -1), assets.get("poster.jpg", -1))
+')"
+  read -r remote_video_size remote_poster_size <<< "$sizes"
+  local_video_size="$(stat -f %z "$video")"
+  local_poster_size="$(stat -f %z "$poster")"
+  if [ "$remote_video_size" != "$local_video_size" ] || [ "$remote_poster_size" != "$local_poster_size" ]; then
+    echo "Uploading streaming fallback for $asset_id…"
+    gh release upload "$tag" --repo "$GITHUB_REPO" --clobber \
+      "$video#video_1080p.mp4" "$poster#poster.jpg"
+  fi
+
+  mirror="https://github.com/$GITHUB_REPO/releases/download/$tag"
+  changed="$(python3 - "$doc" "$mirror" <<'PY'
+import json, sys
+path, mirror = sys.argv[1:]
+with open(path, encoding="utf-8") as fh:
+    asset = json.load(fh)
+urls = asset.setdefault("mirror_urls", [])
+if mirror in urls:
+    print("no")
+else:
+    urls.append(mirror)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(asset, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    print("yes")
+PY
+)"
+  if [ "$changed" = "yes" ]; then
+    minisign -S -H -q -s "$TMPKEY" -m "$doc" -x "$doc.minisig"
+  fi
+done < <(find "$REPO_DIR/assets" -maxdepth 1 -name "*.json" -type f | sort)
+
+# 3. Extend + sign the schedules forward from today (prehashed = app-compatible).
 python3 "$REPO_DIR/scripts/refresh_schedules.py" --root "$REPO_DIR" --secret-key "$TMPKEY" --days "$DAYS"
 
-# 3. Verify every channel signature against the published key (prehashed required).
+# 4. Verify every changed trust document against the published key.
 fail=0
 while IFS= read -r sig; do
   doc="${sig%.minisig}"
   if ! minisign -V -H -p "$PUB" -m "$doc" >/dev/null 2>&1; then
     echo "VERIFY FAIL: $doc"; fail=1
   fi
-done < <(find "$REPO_DIR/channels" -name "*.minisig")
+done < <(find "$REPO_DIR/channels" "$REPO_DIR/assets" -name "*.minisig")
 [ "$fail" -eq 0 ] || { echo "error: some documents failed verification — NOT publishing."; exit 1; }
-echo "All channel documents verify against the published key."
+echo "All channel and asset documents verify against the published key."
 
-# 4. Publish only if something changed.
+# 5. Publish only if something changed.
 cd "$REPO_DIR"
-if [ -z "$(git status --porcelain --untracked-files=normal -- channels)" ]; then
-  echo "Schedule horizon already current — nothing to publish."
+if [ -z "$(git status --porcelain --untracked-files=normal -- channels assets)" ]; then
+  echo "Streaming fallbacks and schedule horizon already current — nothing to publish."
 else
-  git add --all -- channels/*/schedules
-  git commit -m "Extend official schedule horizon (+${DAYS}d)"
+  git add --all -- channels/*/schedules assets
+  git commit -m "Refresh official media origins and schedules (+${DAYS}d)"
   git push
-  echo "Published. Open Cinema is live for the next ${DAYS} days."
+  echo "Published. Open Cinema has HTTP fallbacks and is live for the next ${DAYS} days."
 fi
