@@ -1,0 +1,842 @@
+{
+  "spec": 1,
+  "channel_id": "open-cinema",
+  "version": 1,
+  "valid_from": "2026-07-17T00:00:00Z",
+  "valid_until": "2026-07-18T00:00:00Z",
+  "slots": [
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-000",
+      "start_time": 0,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-001",
+      "start_time": 888,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-002",
+      "start_time": 1523,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-003",
+      "start_time": 2257,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-004",
+      "start_time": 2911,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-005",
+      "start_time": 3799,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-006",
+      "start_time": 4434,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-007",
+      "start_time": 5168,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-008",
+      "start_time": 5822,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-009",
+      "start_time": 6710,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-010",
+      "start_time": 7345,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-011",
+      "start_time": 8079,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-012",
+      "start_time": 8733,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-013",
+      "start_time": 9621,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-014",
+      "start_time": 10256,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-015",
+      "start_time": 10990,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-016",
+      "start_time": 11644,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-017",
+      "start_time": 12532,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-018",
+      "start_time": 13167,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-019",
+      "start_time": 13901,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-020",
+      "start_time": 14555,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-021",
+      "start_time": 15443,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-022",
+      "start_time": 16078,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-023",
+      "start_time": 16812,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-024",
+      "start_time": 17466,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-025",
+      "start_time": 18354,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-026",
+      "start_time": 18989,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-027",
+      "start_time": 19723,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-028",
+      "start_time": 20377,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-029",
+      "start_time": 21265,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-030",
+      "start_time": 21900,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-031",
+      "start_time": 22634,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-032",
+      "start_time": 23288,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-033",
+      "start_time": 24176,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-034",
+      "start_time": 24811,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-035",
+      "start_time": 25545,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-036",
+      "start_time": 26199,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-037",
+      "start_time": 27087,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-038",
+      "start_time": 27722,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-039",
+      "start_time": 28456,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-040",
+      "start_time": 29110,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-041",
+      "start_time": 29998,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-042",
+      "start_time": 30633,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-043",
+      "start_time": 31367,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-044",
+      "start_time": 32021,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-045",
+      "start_time": 32909,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-046",
+      "start_time": 33544,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-047",
+      "start_time": 34278,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-048",
+      "start_time": 34932,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-049",
+      "start_time": 35820,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-050",
+      "start_time": 36455,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-051",
+      "start_time": 37189,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-052",
+      "start_time": 37843,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-053",
+      "start_time": 38731,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-054",
+      "start_time": 39366,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-055",
+      "start_time": 40100,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-056",
+      "start_time": 40754,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-057",
+      "start_time": 41642,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-058",
+      "start_time": 42277,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-059",
+      "start_time": 43011,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-060",
+      "start_time": 43665,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-061",
+      "start_time": 44553,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-062",
+      "start_time": 45188,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-063",
+      "start_time": 45922,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-064",
+      "start_time": 46576,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-065",
+      "start_time": 47464,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-066",
+      "start_time": 48099,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-067",
+      "start_time": 48833,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-068",
+      "start_time": 49487,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-069",
+      "start_time": 50375,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-070",
+      "start_time": 51010,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-071",
+      "start_time": 51744,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-072",
+      "start_time": 52398,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-073",
+      "start_time": 53286,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-074",
+      "start_time": 53921,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-075",
+      "start_time": 54655,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-076",
+      "start_time": 55309,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-077",
+      "start_time": 56197,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-078",
+      "start_time": 56832,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-079",
+      "start_time": 57566,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-080",
+      "start_time": 58220,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-081",
+      "start_time": 59108,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-082",
+      "start_time": 59743,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-083",
+      "start_time": 60477,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-084",
+      "start_time": 61131,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-085",
+      "start_time": 62019,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-086",
+      "start_time": 62654,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-087",
+      "start_time": 63388,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-088",
+      "start_time": 64042,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-089",
+      "start_time": 64930,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-090",
+      "start_time": 65565,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-091",
+      "start_time": 66299,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-092",
+      "start_time": 66953,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-093",
+      "start_time": 67841,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-094",
+      "start_time": 68476,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-095",
+      "start_time": 69210,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-096",
+      "start_time": 69864,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-097",
+      "start_time": 70752,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-098",
+      "start_time": 71387,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-099",
+      "start_time": 72121,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-100",
+      "start_time": 72775,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-101",
+      "start_time": 73663,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-102",
+      "start_time": 74298,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-103",
+      "start_time": 75032,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-104",
+      "start_time": 75686,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-105",
+      "start_time": 76574,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-106",
+      "start_time": 77209,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-107",
+      "start_time": 77943,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-108",
+      "start_time": 78597,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-109",
+      "start_time": 79485,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-110",
+      "start_time": 80120,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-111",
+      "start_time": 80854,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-112",
+      "start_time": 81508,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-113",
+      "start_time": 82396,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-114",
+      "start_time": 83031,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-115",
+      "start_time": 83765,
+      "asset_id": "elephants-dream",
+      "duration_seconds": 654
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-116",
+      "start_time": 84419,
+      "asset_id": "sintel",
+      "duration_seconds": 888
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-117",
+      "start_time": 85307,
+      "asset_id": "big-buck-bunny",
+      "duration_seconds": 635
+    },
+    {
+      "type": "fixed",
+      "slot_id": "2026-07-17-118",
+      "start_time": 85942,
+      "asset_id": "tears-of-steel",
+      "duration_seconds": 734
+    }
+  ]
+}
