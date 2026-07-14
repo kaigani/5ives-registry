@@ -21,9 +21,20 @@ command -v minisign >/dev/null 2>&1 || { echo "error: minisign not found (brew i
 [ -f "$PUB" ] || { echo "error: published key not found at: $PUB"; exit 1; }
 
 # 1. Decrypt a throwaway copy of the key so signing many schedules needs only ONE
-#    password prompt. The temp key is shredded on any exit.
+#    password prompt. The temp key is overwritten when supported, then deleted on
+#    any exit. (Flash storage may retain physical copies despite an overwrite.)
 TMPKEY="$(mktemp -t 5ives-official-key.XXXXXX)"
-cleanup() { rm -f "$TMPKEY" 2>/dev/null || true; }
+cleanup() {
+  [ -e "$TMPKEY" ] || return 0
+  chmod 600 "$TMPKEY" 2>/dev/null || true
+  if command -v shred >/dev/null 2>&1; then
+    shred -u "$TMPKEY" 2>/dev/null || rm -f "$TMPKEY"
+  elif rm -P "$TMPKEY" 2>/dev/null; then
+    :
+  else
+    rm -f "$TMPKEY"
+  fi
+}
 trap cleanup EXIT INT TERM
 cp "$KEY" "$TMPKEY"; chmod 600 "$TMPKEY"
 echo "Unlock the official signing key (enter your recorded password):"
@@ -45,10 +56,10 @@ echo "All channel documents verify against the published key."
 
 # 4. Publish only if something changed.
 cd "$REPO_DIR"
-if git diff --quiet -- channels; then
+if [ -z "$(git status --porcelain --untracked-files=normal -- channels)" ]; then
   echo "Schedule horizon already current — nothing to publish."
 else
-  git add channels/*/schedules
+  git add --all -- channels/*/schedules
   git commit -m "Extend official schedule horizon (+${DAYS}d)"
   git push
   echo "Published. Open Cinema is live for the next ${DAYS} days."
